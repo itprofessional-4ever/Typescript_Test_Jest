@@ -5,7 +5,7 @@ describe('Utils test suite', () => {
     const result = Utils.toUpperCase('abc')
     expect(result).toBe('ABC')
   });
-  
+
   test('parse simple URL', () => {
     const parsedUrl = Utils.parseUrl('http://localhost:8080/login');
     expect(parsedUrl.href).toBe('http://localhost:8080/login');
@@ -22,5 +22,6 @@ describe('Utils test suite', () => {
       password: 'pass'
     }
     expect(parsedUrl.query).toEqual(expectedQuery)
+    expect(expectedQuery).toBe(expectedQuery);
   })
 })
