@@ -24,4 +24,19 @@ describe('SessionTokenDBAccess itest suite', () => {
     const resultToken = await sessionTokenDBAccess.getToken(someSessionToken.tokenId)
     expect(resultToken).toMatchObject(someSessionToken);
   })
+
+  test('delete sessionToken', async () => {
+    await sessionTokenDBAccess.deleteToken(someSessionToken.tokenId);
+    const resultToken = await sessionTokenDBAccess.getToken(someSessionToken.tokenId);
+    expect(resultToken).toBeUndefined();
+  });
+
+  test('delete missing sessionToken throws error', async () => {
+    try {
+        await sessionTokenDBAccess.deleteToken(someSessionToken.tokenId);
+    } catch (error) {
+        expect(error).toBeInstanceOf(Error);
+        expect(error).toHaveProperty('message', 'SessionToken not deleted!');
+    }
+});
 })

@@ -46,7 +46,7 @@ export class LoginHandler {
             }
         } catch (error) {
             this.response.statusCode = HTTP_CODES.INTERNAL_SERVER_ERROR;
-            this.response.write('Internal error: ' + error.message);
+            this.response.write('Internal error: ');
         }
     }
 }

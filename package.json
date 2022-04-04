@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "itest": "jest --config jest.config.itest.ts",
+    "itest": "jest --config jest.config.itest.js",
     "start": "ts-node src/app/Launcher.ts"
   },
   "repository": {
@@ -16,8 +16,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/jest": "^27.4.1",
+    "@types/nedb": "^1.8.12",
     "@types/node": "^17.0.23",
+    "axios": "^0.26.1",
     "jest": "^27.5.1",
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",

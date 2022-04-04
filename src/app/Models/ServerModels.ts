@@ -1,5 +1,3 @@
-
-
 export interface OperationState {
     authorized: boolean,
     tokenState: TokenState

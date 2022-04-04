@@ -37,6 +37,22 @@ export class UserCredentialsDbAccess {
             });
         });
     }
+    public async deleteUserCredential(usersCredentials: UserCredentials): Promise<void> {
+        return new Promise((resolve, reject) => {
+            this.nedb.remove({
+                username: usersCredentials.username,
+                password: usersCredentials.password
+            }, {}, (err: Error, numRemoved: number) => {
+                if (err) {
+                    return reject(err);
+                } else if (numRemoved == 0) {
+                    return reject(new Error('UserCredentials not deleted!'));
+                } else {
+                    resolve();
+                }
+            })
+        });
+    }
 
 
 
