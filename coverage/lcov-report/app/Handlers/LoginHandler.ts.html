@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">45.83% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/24</span>
+                <span class='fraction'>16/24</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">45.83% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/24</span>
+                <span class='fraction'>16/24</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -126,36 +126,36 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -184,30 +184,30 @@ export class LoginHandler {
 &nbsp;
     public async handleRequest() {
         switch (this.request.method) {
-            case HTTP_METHODS.OPTIONS:
-                await this.handleOptions();
-                break;
-<span class="branch-1 cbranch-no" title="branch not covered" >            case HTTP_METHODS.POST:</span>
-<span class="cstat-no" title="statement not covered" >                await this.handlePost();</span>
+<span class="branch-0 cbranch-no" title="branch not covered" >            case HTTP_METHODS.OPTIONS:</span>
+<span class="cstat-no" title="statement not covered" >                await this.handleOptions();</span>
 <span class="cstat-no" title="statement not covered" >                break;</span>
-            default:
+            case HTTP_METHODS.POST:
+                await this.handlePost();
                 break;
+<span class="branch-2 cbranch-no" title="branch not covered" >            default:</span>
+<span class="cstat-no" title="statement not covered" >                break;</span>
         }
     }
 &nbsp;
-    private async handleOptions() {
-        this.response.writeHead(HTTP_CODES.OK);
+    private async <span class="fstat-no" title="function not covered" >handleOptions(</span>) {
+<span class="cstat-no" title="statement not covered" >        this.response.writeHead(HTTP_CODES.OK);</span>
     }
 &nbsp;
-    private async <span class="fstat-no" title="function not covered" >handlePost(</span>){
-<span class="cstat-no" title="statement not covered" >        try {</span>
-            const requestBody: Account = <span class="cstat-no" title="statement not covered" >await Utils.getRequestBody(this.request);</span>
-            const token = <span class="cstat-no" title="statement not covered" >await this.authorizer.generateToken(requestBody);</span>
-<span class="cstat-no" title="statement not covered" >            if (token) {</span>
-<span class="cstat-no" title="statement not covered" >                this.response.statusCode = HTTP_CODES.CREATED;</span>
-<span class="cstat-no" title="statement not covered" >                this.response.writeHead(HTTP_CODES.CREATED, { 'Content-Type': 'application/json' });</span>
-<span class="cstat-no" title="statement not covered" >                this.response.write(JSON.stringify(token));</span>
-            } else {
+    private async handlePost(){
+        try {
+            const requestBody: Account = await Utils.getRequestBody(this.request);
+            const token = await this.authorizer.generateToken(requestBody);
+            if (token) {
+                this.response.statusCode = HTTP_CODES.CREATED;
+                this.response.writeHead(HTTP_CODES.CREATED, { 'Content-Type': 'application/json' });
+                this.response.write(JSON.stringify(token));
+            } else <span class="missing-if-branch" title="else path not taken" >E</span>{
 <span class="cstat-no" title="statement not covered" >                this.response.statusCode = HTTP_CODES.NOT_fOUND;</span>
 <span class="cstat-no" title="statement not covered" >                this.response.write('wrong username or password');</span>
             }
@@ -223,7 +223,7 @@ export class LoginHandler {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sun Apr 03 2022 20:08:41 GMT-0600 (Mountain Daylight Time)
+                at Sun Apr 03 2022 20:33:35 GMT-0600 (Mountain Daylight Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
