@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/20</span>
+                <span class='fraction'>24/24</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/19</span>
+                <span class='fraction'>23/23</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -92,72 +92,96 @@
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { createServer, ServerResponse, IncomingMessage } from 'http';</span>
-<span class="cstat-no" title="statement not covered" >import { Utils } from '../Utils/Utils';</span>
-<span class="cstat-no" title="statement not covered" >import { LoginHandler } from '../Handlers/LoginHandler';</span>
-<span class="cstat-no" title="statement not covered" >import { DataHandler } from '../Handlers/DataHandler';</span>
-<span class="cstat-no" title="statement not covered" >import { Authorizer } from '../Authorization/Authorizer';</span>
-<span class="cstat-no" title="statement not covered" >import { UsersDBAccess } from '../Data/UsersDBAccess';</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { createServer, ServerResponse } from 'http';
+import { Utils } from '../Utils/Utils';
+import { LoginHandler } from '../Handlers/LoginHandler';
+import { DataHandler } from '../Handlers/DataHandler';
+import { Authorizer } from '../Authorization/Authorizer';
+import { UsersDBAccess } from '../Data/UsersDBAccess';
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >export class S</span></span>erver {
+export class Server {
 &nbsp;
-    private <span class="cstat-no" title="statement not covered" >authorizer: Authorizer = new Authorizer();</span>
-    private <span class="cstat-no" title="statement not covered" >usersDBAccess: UsersDBAccess = new UsersDBAccess();</span>
+    private authorizer: Authorizer = new Authorizer();
+    private usersDBAccess: UsersDBAccess = new UsersDBAccess();
 &nbsp;
-    public <span class="fstat-no" title="function not covered" >startServer(</span>) {
-<span class="cstat-no" title="statement not covered" >        createServer(<span class="fstat-no" title="function not covered" >async (r</span>eq, res) =&gt;<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" > {</span></span></span>
-            const basePath = <span class="cstat-no" title="statement not covered" >Utils.getRequestBasePath(req);</span>
-<span class="cstat-no" title="statement not covered" >            switch (basePath) {</span>
+    public startServer() {
+        createServer(async (req, res) =&gt; {
+            const basePath = Utils.getRequestBasePath(req);
+            this.addCorsHeader(res);
+            switch (basePath) {
                 case 'login':
-<span class="cstat-no" title="statement not covered" >                    await new LoginHandler(req, res, this.authorizer).handleRequest();</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+                    await new LoginHandler(req, res, this.authorizer).handleRequest();
+                    break;
                 case 'users':
-<span class="cstat-no" title="statement not covered" >                    await new DataHandler(req, res, this.authorizer, this.usersDBAccess).handleRequest();</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+                    await new DataHandler(req, res, this.authorizer, this.usersDBAccess).handleRequest();
+                    break;
                 default:
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+                    break;
             }
-<span class="cstat-no" title="statement not covered" >            res.end();</span>
+            res.end();
         }).listen(8080);
-<span class="cstat-no" title="statement not covered" >        console.log('server started')</span>
+        console.log('server started')
     }
-}</pre></td></tr></table></pre>
+&nbsp;
+    private addCorsHeader(res: ServerResponse) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', '*');
+        res.setHeader('Access-Control-Allow-Headers', '*');
+    }
+}
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Apr 04 2022 01:05:06 GMT-0600 (Mountain Daylight Time)
+                at Mon Apr 04 2022 01:40:03 GMT-0600 (Mountain Daylight Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
