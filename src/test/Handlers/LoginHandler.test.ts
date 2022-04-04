@@ -22,6 +22,10 @@ describe('LoginHandler test suite', () => {
     )
   })
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  })
+
   test('options request', async () => {
     requestMock.method = HTTP_METHODS.OPTIONS;
     await logingHandler.handleRequest();
@@ -29,6 +33,7 @@ describe('LoginHandler test suite', () => {
   })
 
   test('not handled http method', async () => {
+    responseMock.writeHead.mockClear();
     requestMock.method = 'someRandomMethod';
     await logingHandler.handleRequest();
     expect(responseMock.writeHead).not.toHaveBeenCalled();
