@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "ts-node src/app/Launcher.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itprofessional-4ever/Typescript_Test_Jest.git"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +21,8 @@
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "nedb" : "^1.8.0"
   }
 }
