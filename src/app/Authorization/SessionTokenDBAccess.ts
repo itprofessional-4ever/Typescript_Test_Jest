@@ -37,4 +37,19 @@ export class SessionTokenDBAccess {
             })
         });
     }
+    public async delete(tokenId: string): Promise<void> {
+        return new Promise((resolve, reject) => {
+            this.nedb.remove({ tokenId: tokenId }, {}, (err: Error, numRemoved: number) => {
+                if (err) {
+                    reject(err)
+                } else {
+                    if (numRemoved == 0) {
+                        reject(new Error('SessionToken not deleted!'))
+                    } else {
+                        resolve();
+                    }
+                }
+            })
+        });
+    }
 }
