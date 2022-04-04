@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">41.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/24</span>
+                <span class='fraction'>10/24</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">20% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>1/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">41.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/24</span>
+                <span class='fraction'>10/24</span>
             </div>
         
             
@@ -116,28 +116,28 @@
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -145,7 +145,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -167,36 +167,36 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ServerResponse, IncomingMessage } from 'http';
 import { Authorizer } from '../Authorization/Authorizer';
-<span class="cstat-no" title="statement not covered" >import { Utils } from '../Utils/Utils';</span>
-<span class="cstat-no" title="statement not covered" >import { HTTP_CODES, Account, HTTP_METHODS } from '../Models/ServerModels'</span>
+import { Utils } from '../Utils/Utils';
+import { HTTP_CODES, Account, HTTP_METHODS } from '../Models/ServerModels'
 &nbsp;
-<span class="cstat-no" title="statement not covered" >export class L</span>oginHandler {
+export class LoginHandler {
 &nbsp;
     private request: IncomingMessage;
     private response: ServerResponse;
     private authorizer: Authorizer;
 &nbsp;
-<span class="fstat-no" title="function not covered" >    public constructor(r</span>equest: IncomingMessage, response: ServerResponse, authorizer: Authorizer) {
-<span class="cstat-no" title="statement not covered" >        this.request = request;</span>
-<span class="cstat-no" title="statement not covered" >        this.response = response;</span>
-<span class="cstat-no" title="statement not covered" >        this.authorizer = authorizer;</span>
+    public constructor(request: IncomingMessage, response: ServerResponse, authorizer: Authorizer) {
+        this.request = request;
+        this.response = response;
+        this.authorizer = authorizer;
     }
 &nbsp;
-    public async <span class="fstat-no" title="function not covered" >handleRequest(</span>) {
-<span class="cstat-no" title="statement not covered" >        switch (this.request.method) {</span>
+    public async handleRequest() {
+        switch (this.request.method) {
             case HTTP_METHODS.OPTIONS:
-<span class="cstat-no" title="statement not covered" >                await this.handleOptions();</span>
-<span class="cstat-no" title="statement not covered" >                break;</span>
-            case HTTP_METHODS.POST:
+                await this.handleOptions();
+                break;
+<span class="branch-1 cbranch-no" title="branch not covered" >            case HTTP_METHODS.POST:</span>
 <span class="cstat-no" title="statement not covered" >                await this.handlePost();</span>
 <span class="cstat-no" title="statement not covered" >                break;</span>
-            default:
+<span class="branch-2 cbranch-no" title="branch not covered" >            default:</span>
 <span class="cstat-no" title="statement not covered" >                break;</span>
         }
     }
 &nbsp;
-    private async <span class="fstat-no" title="function not covered" >handleOptions(</span>) {
-<span class="cstat-no" title="statement not covered" >        this.response.writeHead(HTTP_CODES.OK);</span>
+    private async handleOptions() {
+        this.response.writeHead(HTTP_CODES.OK);
     }
 &nbsp;
     private async <span class="fstat-no" title="function not covered" >handlePost(</span>){
@@ -223,7 +223,7 @@ import { Authorizer } from '../Authorization/Authorizer';
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sun Apr 03 2022 19:45:35 GMT-0600 (Mountain Daylight Time)
+                at Sun Apr 03 2022 20:04:21 GMT-0600 (Mountain Daylight Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
