@@ -28,4 +28,9 @@ describe('LoginHandler test suite', () => {
     expect(responseMock.writeHead).toBeCalledWith(HTTP_CODES.OK)
   })
 
+  test('not handled http method', async () => {
+    requestMock.method = 'someRandomMethod';
+    await logingHandler.handleRequest();
+    expect(responseMock.writeHead).not.toHaveBeenCalled();
+  })
 })
